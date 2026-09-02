@@ -119,6 +119,29 @@ def validate_revision(data: object) -> dict:
             status = row.get("status")
             if status is not None and status not in {"destroyed", "partial", "assessment", "unverified", "unaffected"}:
                 raise RevisionError(f"schools[{index}].status is not recognized: {status!r}")
+            exposure = row.get("exposure")
+            if exposure is not None:
+                if not isinstance(exposure, dict) or not isinstance(exposure.get("within_observed_extent"), bool):
+                    raise RevisionError(f"schools[{index}].exposure must include within_observed_extent as a boolean")
+                distance = exposure.get("distance_to_observed_extent_m")
+                if not isinstance(distance, (int, float)) or distance < 0:
+                    raise RevisionError(f"schools[{index}].exposure.distance_to_observed_extent_m must be non-negative")
+            image_pair = row.get("imagery")
+            if image_pair is not None:
+                if not isinstance(image_pair, dict):
+                    raise RevisionError(f"schools[{index}].imagery must be an object")
+                for phase in ("before", "after"):
+                    scene = image_pair.get(phase)
+                    if not isinstance(scene, dict):
+                        raise RevisionError(f"schools[{index}].imagery.{phase} must be an object")
+                    src = require_text(scene.get("src"), f"schools[{index}].imagery.{phase}.src")
+                    src_path = Path(src)
+                    if src_path.is_absolute() or ".." in src_path.parts or urlparse(src).scheme:
+                        raise RevisionError(f"schools[{index}].imagery.{phase}.src must be a safe relative path")
+                    iso_date(scene.get("acquired"), f"schools[{index}].imagery.{phase}.acquired")
+                    require_text(scene.get("sensor"), f"schools[{index}].imagery.{phase}.sensor")
+                    require_text(scene.get("attribution"), f"schools[{index}].imagery.{phase}.attribution")
+                    require_text(scene.get("license"), f"schools[{index}].imagery.{phase}.license")
 
     imagery = data["imagery"]
     if not isinstance(imagery, dict):
@@ -127,6 +150,28 @@ def validate_revision(data: object) -> dict:
         iso_date(imagery.get(field), f"imagery.{field}")
     if imagery["before_start"] > imagery["before_end"] or imagery["after_start"] > imagery["after_end"]:
         raise RevisionError("imagery date windows must run from earlier to later")
+    for field in ("catalog_url",):
+        if imagery.get(field):
+            parsed = urlparse(imagery[field])
+            if parsed.scheme != "https" or not parsed.netloc:
+                raise RevisionError(f"imagery.{field} must be a valid HTTPS URL")
+    for field in ("license", "attribution"):
+        if imagery.get(field) is not None:
+            require_text(imagery[field], f"imagery.{field}")
+
+    if data.get("osm_live") is not None and not isinstance(data["osm_live"], bool):
+        raise RevisionError("osm_live must be a boolean")
+    hazard = data.get("hazard")
+    if hazard is not None:
+        if not isinstance(hazard, dict):
+            raise RevisionError("hazard must be null or an object")
+        require_text(hazard.get("label"), "hazard.label")
+        parsed = urlparse(require_text(hazard.get("source"), "hazard.source"))
+        if parsed.scheme != "https" or not parsed.netloc:
+            raise RevisionError("hazard.source must be a valid HTTPS URL")
+        geojson = hazard.get("geojson")
+        if not isinstance(geojson, dict) or geojson.get("type") not in {"Feature", "FeatureCollection"}:
+            raise RevisionError("hazard.geojson must be a GeoJSON Feature or FeatureCollection")
 
     if not isinstance(data["sources"], list) or not data["sources"]:
         raise RevisionError("sources must contain at least one source")
@@ -162,6 +207,19 @@ def current_revision(html: str) -> tuple[int, re.Match[str]]:
         raise RevisionError("site contains an unreadable revision block") from exc
 
 
+def validate_local_assets(data: dict, site_directory: Path) -> None:
+    missing = []
+    for index, school in enumerate(data.get("schools", [])):
+        for phase, scene in (school.get("imagery") or {}).items():
+            if phase not in {"before", "after"} or not isinstance(scene, dict) or not scene.get("src"):
+                continue
+            candidate = site_directory / scene["src"]
+            if not candidate.is_file():
+                missing.append(f"schools[{index}].imagery.{phase}: {scene['src']}")
+    if missing:
+        raise RevisionError("referenced static imagery is missing:\n  - " + "\n  - ".join(missing))
+
+
 def atomic_write(path: Path, content: str, backup: bool) -> Path | None:
     backup_path = path.with_suffix(path.suffix + ".bak") if backup else None
     if backup_path:
@@ -191,10 +249,13 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="show the proposed update; do not write")
     parser.add_argument("--force", action="store_true", help="allow a revision number that is not newer")
     parser.add_argument("--no-backup", action="store_true", help="do not keep SITE.html.bak for in-place updates")
+    parser.add_argument("--allow-missing-assets", action="store_true", help="allow revision references to absent static images")
     args = parser.parse_args()
 
     try:
         incoming = load_json(args.revision_file)
+        if not args.allow_missing_assets:
+            validate_local_assets(incoming, args.site.parent)
         html = args.site.read_text(encoding="utf-8")
         existing_number, match = current_revision(html)
         if incoming["revision"] <= existing_number and not args.force:

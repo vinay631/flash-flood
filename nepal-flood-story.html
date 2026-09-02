@@ -22,10 +22,10 @@
     .chapter{min-height:86vh;padding:120px 30px 80px;opacity:.35;transition:opacity .45s ease}.chapter.active{opacity:1}.chapter-num{font:700 11px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--red);letter-spacing:.12em}.chapter h2{font:400 37px/1.03 Georgia,"Times New Roman",serif;letter-spacing:-.025em;margin:14px 0 20px}.chapter p{font:400 16px/1.62 Georgia,"Times New Roman",serif;color:#c8c7c1;margin:0 0 18px}.fact{margin:30px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;align-items:flex-end;gap:15px}.fact b{font:400 58px/.8 Georgia,serif;color:var(--amber);letter-spacing:-.06em}.fact span{font-size:11px;line-height:1.4;text-transform:uppercase;letter-spacing:.09em;color:#aeb4b0;max-width:135px}.source-note{font:500 10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace!important;color:#77817c!important}
     .school-breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0}.school-breakdown div{padding:16px 10px;background:#171e1b;border:1px solid #29332f;border-radius:4px}.school-breakdown b{display:block;font:400 30px/1 Georgia,serif;color:var(--ink)}.school-breakdown small{display:block;color:#929a95;text-transform:uppercase;font-size:8px;letter-spacing:.09em;margin-top:6px}
     .endnote{padding:90px 30px 120px;border-top:1px solid var(--line)}.endnote h2{font:400 34px/1.05 Georgia,serif;margin:0 0 20px}.endnote p{color:#aeb3af;line-height:1.6;font-size:13px}.sources{display:grid;gap:9px;margin-top:24px}.sources a{color:#c4deda;text-decoration:none;border-bottom:1px solid #31423e;padding-bottom:8px;font-size:11px}.sources a:hover{color:white}
-    .legend{position:absolute;z-index:800;left:24px;bottom:22px;background:rgba(16,22,20,.92);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px;box-shadow:var(--shadow);font-size:10px;letter-spacing:.04em;color:#c8ccc9}.legend-title{text-transform:uppercase;letter-spacing:.12em;color:#7f8984;margin-bottom:10px}.legend-row{display:flex;align-items:center;gap:9px;margin-top:7px}.swatch{width:18px;height:3px;background:var(--red)}.swatch.school{width:9px;height:9px;border:2px solid var(--amber);background:#171e1b;border-radius:50%}.swatch.risk{width:12px;height:12px;background:rgba(246,184,74,.1);border:1px dashed var(--amber);border-radius:50%}
+    .legend{position:absolute;z-index:800;left:24px;bottom:22px;background:rgba(16,22,20,.92);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:14px 16px;box-shadow:var(--shadow);font-size:10px;letter-spacing:.04em;color:#c8ccc9}.legend-title{text-transform:uppercase;letter-spacing:.12em;color:#7f8984;margin-bottom:10px}.legend-row{display:flex;align-items:center;gap:9px;margin-top:7px}.swatch{width:18px;height:3px;background:var(--red)}.swatch.school{width:9px;height:9px;border:2px solid var(--amber);background:#171e1b;border-radius:50%}.swatch.risk{width:12px;height:12px;background:rgba(246,184,74,.1);border:1px dashed var(--amber);border-radius:50%}.swatch.hazard{width:16px;height:10px;border:1px solid #ff765f;background:rgba(255,92,69,.22)}
     .map-kicker{position:absolute;z-index:800;right:22px;top:20px;width:260px;background:rgba(16,22,20,.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.11);border-radius:4px;padding:15px 16px;box-shadow:var(--shadow)}.map-kicker small{display:block;text-transform:uppercase;letter-spacing:.12em;color:#7e8a85;font-size:9px}.map-kicker strong{display:block;font:400 17px/1.25 Georgia,serif;margin-top:5px}.map-kicker span{display:block;font-size:10px;line-height:1.45;color:#aab0ac;margin-top:6px}
     .leaflet-control-zoom a{background:#141b18!important;color:#e9eee9!important;border-color:#2a3732!important}.leaflet-control-attribution{background:rgba(13,18,16,.84)!important;color:#84908a!important;font-size:8px!important}.leaflet-control-attribution a{color:#a9c9c4!important}.leaflet-tile-pane{filter:saturate(.55) contrast(1.08) brightness(.72)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#121916;color:#ecefe9}.leaflet-popup-content{margin:14px 16px;min-width:180px}.leaflet-popup-content b{font-family:Georgia,serif;font-size:15px}.leaflet-popup-content small{display:block;color:#9ba39e;margin-top:5px;line-height:1.4}.school-marker{width:17px;height:17px;border:3px solid var(--amber);border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#151b18;box-shadow:0 2px 12px rgba(0,0,0,.6)}.school-marker:after{content:"";position:absolute;width:3px;height:3px;border-radius:50%;background:var(--amber);left:4px;top:4px}.school-marker.destroyed{border-color:var(--red)}.school-marker.destroyed:after{background:var(--red)}.school-marker.assessment{border-color:var(--cyan)}.school-marker.assessment:after{background:var(--cyan)}.school-marker.unaffected{border-color:#92a09a}.school-marker.unaffected:after{background:#92a09a}.event-marker{width:12px;height:12px;border:2px solid white;border-radius:50%;background:var(--red);box-shadow:0 0 0 8px rgba(255,92,69,.18)}
-    .modal{position:fixed;z-index:2000;inset:0;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(3,7,6,.78);backdrop-filter:blur(8px)}.modal.open{display:flex}.compare-card{width:min(1080px,96vw);background:#f1eee7;color:#17201c;border-radius:8px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6)}.compare-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:19px 22px;border-bottom:1px solid #d3d0c8}.compare-head small{display:block;font:700 9px/1.4 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.11em;color:#68746e}.compare-head h3{font:400 24px/1.1 Georgia,serif;margin:5px 0 0}.close{border:0;background:#dcd8cf;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:20px;color:#25302b}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#c8c5bd}.scene{height:455px;position:relative;background:#26312c}.scene-map{width:100%;height:100%}.scene-label{position:absolute;z-index:700;top:12px;left:12px;background:rgba(13,19,16,.88);color:white;padding:10px 12px;border-radius:3px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.scene-label b{display:block;font:700 10px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}.scene-label span{font-size:10px;color:#bdc6c0}.loader{position:absolute;z-index:650;inset:0;display:grid;place-items:center;color:white;font:700 10px/1.5 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;background:linear-gradient(135deg,#22312b,#111916)}.compare-foot{display:flex;justify-content:space-between;gap:22px;padding:14px 22px;font-size:10px;line-height:1.5;color:#5f6c66}.compare-foot a{color:#244e47}.status-pill{font:700 9px/1 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.09em;color:#9b5617;background:#f4dcae;padding:7px 9px;border-radius:999px;white-space:nowrap}
+    .modal{position:fixed;z-index:2000;inset:0;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(3,7,6,.78);backdrop-filter:blur(8px)}.modal.open{display:flex}.compare-card{width:min(1080px,96vw);background:#f1eee7;color:#17201c;border-radius:8px;overflow:hidden;box-shadow:0 40px 120px rgba(0,0,0,.6)}.compare-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:19px 22px;border-bottom:1px solid #d3d0c8}.compare-head small{display:block;font:700 9px/1.4 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.11em;color:#68746e}.compare-head h3{font:400 24px/1.1 Georgia,serif;margin:5px 0 0}.close{border:0;background:#dcd8cf;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:20px;color:#25302b}.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#c8c5bd}.scene{height:455px;position:relative;background:#26312c;overflow:hidden}.scene-image{width:100%;height:100%;display:block;object-fit:cover;transition:transform .35s ease}.scene:hover .scene-image{transform:scale(1.035)}.scene-label{position:absolute;z-index:700;top:12px;left:12px;background:rgba(13,19,16,.88);color:white;padding:10px 12px;border-radius:3px;box-shadow:0 8px 30px rgba(0,0,0,.22)}.scene-label b{display:block;font:700 10px/1 ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase}.scene-label span{font-size:10px;color:#bdc6c0}.loader{position:absolute;z-index:650;inset:0;display:grid;place-items:center;text-align:center;padding:30px;color:white;font:700 10px/1.5 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.12em;background:linear-gradient(135deg,#22312b,#111916)}.loader a{color:var(--cyan);text-transform:none}.compare-foot{display:flex;justify-content:space-between;gap:22px;padding:14px 22px;font-size:10px;line-height:1.5;color:#5f6c66}.compare-foot a{color:#244e47}.status-pill{font:700 9px/1 ui-monospace,monospace;text-transform:uppercase;letter-spacing:.09em;color:#9b5617;background:#f4dcae;padding:7px 9px;border-radius:999px;white-space:nowrap}
     @media(max-width:860px){.map-shell{position:sticky;top:0;inset:auto;width:100%;height:52vh;z-index:400}.rail{width:100%;box-shadow:none}.mast{position:relative}.hero{min-height:78vh}.chapter{min-height:72vh;padding-top:90px}.map-kicker{right:12px;top:12px;width:215px}.legend{left:12px;bottom:10px}.compare-grid{grid-template-columns:1fr}.scene{height:280px}.compare-card{max-height:92vh;overflow:auto}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.chapter{transition:none}}
   </style>
@@ -35,7 +35,7 @@
     <section class="map-shell" aria-label="Interactive flood route map">
       <div id="map"></div>
       <div class="map-kicker"><small id="mapStep">01 · Origin</small><strong id="mapTitle">A rupture in the high Himalaya</strong><span id="mapCopy">The suspected ice-rock avalanche entered Lhende Khola near the Nepal–China border.</span></div>
-      <div class="legend"><div class="legend-title">Map key</div><div class="legend-row"><i class="swatch"></i> Reported river sequence</div><div class="legend-row"><i class="swatch school"></i> School screening location</div><div class="legend-row"><i class="swatch risk"></i> 1 km screening corridor</div></div>
+      <div class="legend"><div class="legend-title">Map key</div><div class="legend-row"><i class="swatch"></i> Reported river sequence</div><div class="legend-row" id="hazardLegend" hidden><i class="swatch hazard"></i> UNOSAT observed extent</div><div class="legend-row"><i class="swatch school"></i> School screening location</div><div class="legend-row"><i class="swatch risk"></i> 1 km screening corridor</div></div>
     </section>
 
     <article class="rail">
@@ -44,7 +44,7 @@
         <div class="eyebrow" id="eventLabel">Rasuwa, Nepal · 26 August 2026</div>
         <h1>The river rose in <em>minutes.</em></h1>
         <div class="dek">Trace the flood from a high-mountain tributary into the Bhote Koshi and Trishuli—and the schools caught along its corridor.</div>
-        <div class="dateline"><span>Satellite imagery<br><b>Sentinel-2 L2A</b></span><span>School locations<br><b>OpenStreetMap</b></span></div>
+        <div class="dateline"><span>Hazard mapping<br><b>UNOSAT + Planet</b></span><span>School locations<br><b>OpenStreetMap</b></span></div>
         <div class="scroll-cue"><span></span> Scroll downstream</div>
       </section>
 
@@ -54,9 +54,9 @@
 
       <section class="chapter" data-stage="2"><div class="chapter-num">03 / TRISHULI</div><h2>The hazard widened as the rivers joined.</h2><p>Below Syabrubesi, the Bhote Koshi becomes the Trishuli. The flood moved south through Rasuwa and Nuwakot toward Dhading—turning a mountain disaster into a long river-corridor emergency.</p><p id="districtsText">Five districts were affected: Rasuwa, Nuwakot, Dhading, Gorkha and Tanahun.</p></section>
 
-      <section class="chapter" data-stage="3"><div class="chapter-num">04 / SCHOOLS</div><h2 id="damageHeadline">Nineteen schools are reported damaged.</h2><p id="assessmentText">UNICEF’s 31 August situation report gives the first corridor-wide education assessment. The count remains preliminary as field teams reach isolated communities.</p><div class="school-breakdown"><div><b id="destroyedCount">8</b><small>completely destroyed</small></div><div><b id="partialCount">8</b><small>partially destroyed</small></div><div><b id="assessmentCount">3</b><small>under assessment</small></div></div><p id="screeningText">Another 80 schools within one kilometre of the river may have been affected. The amber map markers are OpenStreetMap school locations inside that screening corridor—not confirmed damage classifications.</p><p class="source-note">CLICK A SCHOOL MARKER TO REQUEST BEFORE / AFTER SENTINEL-2 SCENES</p></section>
+      <section class="chapter" data-stage="3"><div class="chapter-num">04 / SCHOOLS</div><h2 id="damageHeadline">Nineteen schools are reported damaged.</h2><p id="assessmentText">UNICEF’s 31 August situation report gives the first corridor-wide education assessment. The count remains preliminary as field teams reach isolated communities.</p><div class="school-breakdown"><div><b id="destroyedCount">8</b><small>completely destroyed</small></div><div><b id="partialCount">8</b><small>partially destroyed</small></div><div><b id="assessmentCount">3</b><small>under assessment</small></div></div><p id="screeningText">Another 80 schools within one kilometre of the river may have been affected. The amber map markers are OpenStreetMap school locations inside that screening corridor—not confirmed damage classifications.</p><p class="source-note">CLICK A SCHOOL MARKER TO VIEW THE PRE-GENERATED IMAGE PAIR</p></section>
 
-      <section class="chapter" data-stage="4"><div class="chapter-num">05 / WHAT THE SATELLITE SEES</div><h2>Every point needs verification.</h2><p>Sentinel-2 can reveal channel widening, debris, sediment and major building loss at 10-metre resolution. It cannot, by itself, establish whether a school is safe to occupy.</p><p>The image viewer selects the lowest-cloud scene available before and after 26 August. Cloud, shadow, terrain and the satellite’s revisit timing can obscure damage; field assessment remains the authority.</p></section>
+      <section class="chapter" data-stage="4"><div class="chapter-num">05 / WHAT THE SATELLITE SEES</div><h2>Every point needs verification.</h2><p>PlanetScope provides roughly 3.8-metre corridor coverage; selected SkySat and Pelican scenes provide sub-metre detail. The map uses pre-generated crops so the evidence remains stable and fast.</p><p>Cloud, shadow, steep terrain and different viewing conditions can still obscure damage. Satellite context does not establish whether a school is safe to occupy; field assessment remains the authority.</p></section>
 
       <footer class="endnote"><h2>A living assessment</h2><p>This prototype separates reported totals from geospatial screening. Replace the OpenStreetMap candidates with the Education Cluster’s verified school list when it is published; retain imagery date, cloud cover and analyst confidence for every damage decision.</p><div class="sources" id="storySources"></div></footer>
     </article>
@@ -64,12 +64,12 @@
 
   <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="schoolTitle">
     <div class="compare-card">
-      <header class="compare-head"><div><small>Sentinel-2 visual check · 10 m resolution</small><h3 id="schoolTitle">School location</h3></div><button class="close" id="closeModal" aria-label="Close comparison">×</button></header>
+      <header class="compare-head"><div><small>Static satellite evidence · acquisition metadata preserved</small><h3 id="schoolTitle">School location</h3></div><button class="close" id="closeModal" aria-label="Close comparison">×</button></header>
       <div class="compare-grid">
-        <div class="scene"><div class="scene-label"><b>Before</b><span id="beforeDate">Searching archive…</span></div><div class="loader" id="beforeLoader">Finding lowest-cloud scene</div><div class="scene-map" id="beforeMap"></div></div>
-        <div class="scene"><div class="scene-label"><b>After</b><span id="afterDate">Searching archive…</span></div><div class="loader" id="afterLoader">Finding lowest-cloud scene</div><div class="scene-map" id="afterMap"></div></div>
+        <div class="scene"><div class="scene-label"><b>Before</b><span id="beforeDate">No image loaded</span></div><div class="loader" id="beforeLoader">Static image not generated</div><img class="scene-image" id="beforeImage" alt="Pre-flood satellite view of the selected school" /></div>
+        <div class="scene"><div class="scene-label"><b>After</b><span id="afterDate">No image loaded</span></div><div class="loader" id="afterLoader">Static image not generated</div><img class="scene-image" id="afterImage" alt="Post-flood satellite view of the selected school" /></div>
       </div>
-      <footer class="compare-foot"><span>Imagery is evidence for review, not a final damage determination. Scene dates and cloud cover are shown when available.</span><span class="status-pill" id="schoolStatus">OSM location · damage unverified</span></footer>
+      <footer class="compare-foot"><span id="imageryCredit">Imagery is evidence for review, not a final damage determination.</span><span class="status-pill" id="schoolStatus">OSM location · damage unverified</span></footer>
     </div>
   </div>
 
@@ -80,6 +80,8 @@
   "event_date": "2026-08-26",
   "event_label": "Rasuwa, Nepal",
   "assessment_label": "UNICEF’s 31 August situation report",
+  "osm_live": true,
+  "hazard": null,
   "impact": {
     "damaged_total": 19,
     "destroyed": 8,
@@ -100,10 +102,20 @@
   "schools": [
     {"lat":28.257,"lon":85.374,"name":"School location · Rasuwagadhi"},{"lat":28.198,"lon":85.356,"name":"School location · Timure"},{"lat":28.164,"lon":85.342,"name":"School location · Syabrubesi"},{"lat":28.097,"lon":85.289,"name":"School location · Dhunche area"},{"lat":28.030,"lon":85.218,"name":"School location · Ramche area"},{"lat":27.984,"lon":85.198,"name":"School location · Kalikasthan area"},{"lat":27.949,"lon":85.181,"name":"School location · Betrawati"},{"lat":27.917,"lon":85.158,"name":"School location · Trishuli"},{"lat":27.884,"lon":85.126,"name":"School location · Devighat"},{"lat":27.846,"lon":84.998,"name":"School location · Trishuli corridor"},{"lat":27.814,"lon":84.823,"name":"School location · Galchhi corridor"},{"lat":27.791,"lon":84.742,"name":"School location · Malekhu corridor"}
   ],
-  "imagery": {"before_start":"2026-06-01","before_end":"2026-08-25","after_start":"2026-08-27","after_end":"2026-09-30"},
+  "imagery": {
+    "before_start":"2026-05-27",
+    "before_end":"2026-08-25",
+    "after_start":"2026-08-26",
+    "after_end":"2026-09-30",
+    "catalog_url":"https://data.source.coop/planet/disasterdata/nepal-flash-flood-2026-08-26/catalog.json",
+    "license":"CC BY-NC 4.0",
+    "attribution":"Imagery © Planet Labs PBC, Planet Crisis Response Program"
+  },
   "sources": [
     {"title":"UNICEF · Humanitarian Situation Report No. 1","url":"https://www.unicef.org/media/183906/file/Nepal-Humanitarian-Situation-Report-No.1(Rasuwa-Flood),31-August-2026.pdf.pdf"},
-    {"title":"ICIMOD · Initial scientific assessment","url":"https://www.icimod.org/press-release/major-flash-flood-sweeps-through-nepals-rasuwa-district-raising-fears-of-further-downstream-flooding/"}
+    {"title":"ICIMOD · Initial scientific assessment","url":"https://www.icimod.org/press-release/major-flash-flood-sweeps-through-nepals-rasuwa-district-raising-fears-of-further-downstream-flooding/"},
+    {"title":"UNOSAT · Satellite-detected mudflow and rockflow extent","url":"https://ihp-wins.unesco.org/en/dataset/nepal-satellite-detected-mudflow-and-rockflow-extent-nepal"},
+    {"title":"Planet Crisis Response · Open Nepal imagery catalog","url":"https://source.coop/planet/disasterdata/nepal-flash-flood-2026-08-26"}
   ]
 }
   </script>
@@ -124,13 +136,13 @@
     document.getElementById('assessmentCount').textContent=revision.impact.assessment;
     document.getElementById('screeningText').textContent=`Another ${revision.impact.within_1km} schools within one kilometre of the river may have been affected. The amber map markers are OpenStreetMap school locations inside that screening corridor—not confirmed damage classifications.`;
     const sourceContainer=document.getElementById('storySources');
-    [...revision.sources,{title:'OpenStreetMap contributors · School locations',url:'https://www.openstreetmap.org/copyright'},{title:'Copernicus Sentinel-2 via Microsoft Planetary Computer',url:'https://planetarycomputer.microsoft.com/dataset/sentinel-2-l2a'}].forEach(source=>{const a=document.createElement('a');a.href=source.url;a.target='_blank';a.rel='noreferrer';a.textContent=source.title;sourceContainer.appendChild(a)});
+    [...revision.sources,{title:'OpenStreetMap contributors · School locations',url:'https://www.openstreetmap.org/copyright'}].forEach(source=>{const a=document.createElement('a');a.href=source.url;a.target='_blank';a.rel='noreferrer';a.textContent=source.title;sourceContainer.appendChild(a)});
     const stages = [
       {view:[28.30,85.47],zoom:11,step:'01 · Origin',title:'A rupture in the high Himalaya',copy:'The suspected ice-rock avalanche entered Lhende Khola near the Nepal–China border.'},
       {view:[28.20,85.36],zoom:10.8,step:'02 · Bhote Koshi',title:'The valley channels the surge',copy:'The flood crossed Rasuwagadhi and raced toward Syabrubesi.'},
       {view:[28.00,85.18],zoom:9.8,step:'03 · Trishuli',title:'One flood, a longer corridor',copy:'Below Syabrubesi the Bhote Koshi enters the Trishuli river system.'},
       {view:[27.93,85.05],zoom:9.3,step:'04 · Schools',title:'Education infrastructure in its path',copy:'OSM schools within a 1 km screening corridor appear in amber.'},
-      {view:[27.95,85.08],zoom:9.4,step:'05 · Verification',title:'Compare the ground before and after',copy:'Select any school to search Sentinel-2 scenes around that point.'}
+      {view:[27.95,85.08],zoom:9.4,step:'05 · Verification',title:'Compare the ground before and after',copy:'Select a prepared school record to view its static satellite pair.'}
     ];
     const map = L.map('map',{zoomControl:false,preferCanvas:true}).setView(stages[0].view,stages[0].zoom);
     L.control.zoom({position:'bottomright'}).addTo(map);
@@ -138,17 +150,24 @@
     L.polyline(route,{color:'#f6b84a',weight:18,opacity:.08,dashArray:'2 10'}).addTo(map);
     L.polyline(route,{color:'#ff5c45',weight:4,opacity:.92,lineCap:'round'}).addTo(map);
     L.polyline(route,{color:'#ffd1c9',weight:1.2,opacity:.95,dashArray:'2 10',className:'flow-line'}).addTo(map);
+    if(revision.hazard&&revision.hazard.geojson){
+      L.geoJSON(revision.hazard.geojson,{style:{color:'#ff765f',weight:1.3,opacity:.95,fillColor:'#ff5c45',fillOpacity:.22}}).addTo(map).bindPopup(`<b>${revision.hazard.label||'Observed hazard extent'}</b><small>${revision.hazard.note||'Preliminary satellite analysis; not field validated.'}</small>`);
+      document.getElementById('hazardLegend').hidden=false;
+    }
     revision.places.forEach(({lat,lon,name,note})=>L.marker([lat,lon],{icon:L.divIcon({className:'',html:'<div class="event-marker"></div>',iconSize:[12,12],iconAnchor:[6,6]})}).addTo(map).bindPopup(`<b>${name}</b><small>${note}</small>`));
 
     const fallbackSchools = revision.schools;
     const schoolLayer=L.layerGroup().addTo(map);
-    function addSchool({lat,lon,name,status='unverified',osm_id=null}){
+    function addSchool(school){
+      const {lat,lon,name,status='unverified',osm_id=null,exposure=null}=school;
       const marker=L.marker([lat,lon],{icon:L.divIcon({className:'',html:`<div class="school-marker ${status}"></div>`,iconSize:[18,18],iconAnchor:[9,18]})}).addTo(schoolLayer);
-      marker.bindTooltip(`${name} · ${status}`,{direction:'top',offset:[0,-14],opacity:.94});
-      marker.on('click',()=>openCompare({lat,lon,name,status,osm_id}));
+      const exposureText=exposure&&exposure.within_observed_extent?' · inside observed extent':'';
+      marker.bindTooltip(`${name} · ${status}${exposureText}`,{direction:'top',offset:[0,-14],opacity:.94});
+      marker.on('click',()=>openCompare(school));
     }
     fallbackSchools.forEach(addSchool);
     async function loadOSMSchools(){
+      if(revision.osm_live===false)return;
       const q='[out:json][timeout:20];(nwr["amenity"="school"](27.72,84.65,28.34,85.46););out center tags;';
       try{
         const res=await fetch('https://overpass-api.de/api/interpreter',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'data='+encodeURIComponent(q)});
@@ -165,38 +184,34 @@
     chapters.forEach(c=>observer.observe(c));
     function setStage(i){const s=stages[i];map.flyTo(s.view,s.zoom,{duration:1.4});document.getElementById('mapStep').textContent=s.step;document.getElementById('mapTitle').textContent=s.title;document.getElementById('mapCopy').textContent=s.copy;schoolLayer.eachLayer(l=>{const el=l.getElement&&l.getElement();if(el)el.style.opacity=i>=3?'1':'.22'})}
 
-    const modal=document.getElementById('modal');let beforeMap,afterMap;
+    const modal=document.getElementById('modal');
     document.getElementById('closeModal').onclick=closeCompare;modal.addEventListener('click',e=>{if(e.target===modal)closeCompare()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCompare()});
-    function closeCompare(){modal.classList.remove('open');setTimeout(()=>{if(beforeMap){beforeMap.remove();afterMap.remove();beforeMap=afterMap=null}},120)}
-    async function openCompare(school){
-      document.getElementById('schoolTitle').textContent=school.name;document.getElementById('schoolStatus').textContent=`${school.osm_id?'OSM '+school.osm_id:'Mapped record'} · ${school.status}`;modal.classList.add('open');
-      document.getElementById('beforeLoader').style.display='grid';document.getElementById('afterLoader').style.display='grid';
-      document.getElementById('beforeLoader').textContent='Finding lowest-cloud scene';document.getElementById('afterLoader').textContent='Finding lowest-cloud scene';
-      beforeMap=L.map('beforeMap',{zoomControl:false,attributionControl:false}).setView([school.lat,school.lon],16);
-      afterMap=L.map('afterMap',{zoomControl:false,attributionControl:false}).setView([school.lat,school.lon],16);
-      [beforeMap,afterMap].forEach(m=>{L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,opacity:.25}).addTo(m);L.circleMarker([school.lat,school.lon],{radius:7,color:'#f6b84a',weight:2,fillColor:'#f6b84a',fillOpacity:.22}).addTo(m)});
-      beforeMap.syncing=false;afterMap.syncing=false;
-      beforeMap.on('move',()=>syncMaps(beforeMap,afterMap));afterMap.on('move',()=>syncMaps(afterMap,beforeMap));
-      await Promise.allSettled([
-        loadScene(beforeMap,school,`${revision.imagery.before_start}T00:00:00Z/${revision.imagery.before_end}T23:59:59Z`,'beforeDate','beforeLoader'),
-        loadScene(afterMap,school,`${revision.imagery.after_start}T00:00:00Z/${revision.imagery.after_end}T23:59:59Z`,'afterDate','afterLoader')
-      ]);
+    function closeCompare(){modal.classList.remove('open')}
+    function openCompare(school){
+      const status=school.status||'unverified',scenes=school.imagery||{};
+      document.getElementById('schoolTitle').textContent=school.name;document.getElementById('schoolStatus').textContent=`${school.osm_id?'OSM '+school.osm_id:'Mapped record'} · ${status}`;
+      const credit=(scenes.after&&scenes.after.attribution)||(scenes.before&&scenes.before.attribution);
+      const license=(scenes.after&&scenes.after.license)||(scenes.before&&scenes.before.license);
+      document.getElementById('imageryCredit').textContent=credit?`${credit} · ${license||'See source terms'} · Visual interpretation only.`:'Imagery is evidence for review, not a final damage determination.';
+      modal.classList.add('open');
+      showStaticScene('before',school.imagery&&school.imagery.before);
+      showStaticScene('after',school.imagery&&school.imagery.after);
     }
-    function syncMaps(a,b){if(a.syncing)return;b.syncing=true;b.setView(a.getCenter(),a.getZoom(),{animate:false});b.syncing=false}
-    async function loadScene(target,school,range,dateId,loaderId){
-      const loader=document.getElementById(loaderId),dateEl=document.getElementById(dateId),d=.015;
-      const params=new URLSearchParams({collections:'sentinel-2-l2a',bbox:`${school.lon-d},${school.lat-d},${school.lon+d},${school.lat+d}`,datetime:range,limit:'20'});
-      try{
-        const res=await fetch('https://planetarycomputer.microsoft.com/api/stac/v1/search?'+params);if(!res.ok)throw new Error('Archive unavailable');
-        const data=await res.json();const items=(data.features||[]).sort((a,b)=>(a.properties['eo:cloud_cover']??100)-(b.properties['eo:cloud_cover']??100));if(!items.length)throw new Error('No scene in date window');
-        const item=items[0],asset=item.assets.visual||item.assets.rendered_preview;if(!asset)throw new Error('No visual asset');
-        const sign=await fetch('https://planetarycomputer.microsoft.com/api/sas/v1/sign?href='+encodeURIComponent(asset.href));if(!sign.ok)throw new Error('Scene signing unavailable');
-        const signed=await sign.json(),href=signed.href||signed.url||asset.href;
-        const tiles='https://planetarycomputer.microsoft.com/api/data/v1/cog/tiles/WebMercatorQuad/{z}/{x}/{y}@1x.png?url='+encodeURIComponent(href);
-        L.tileLayer(tiles,{maxZoom:18,maxNativeZoom:16,attribution:'Copernicus Sentinel-2'}).addTo(target);
-        const dt=new Date(item.properties.datetime);dateEl.textContent=`${dt.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'})} · ${Math.round(item.properties['eo:cloud_cover']||0)}% tile cloud`;
-        loader.style.display='none';
-      }catch(err){loader.innerHTML=`Scene unavailable<br><span style="font-weight:400;color:#b9c3bd;text-transform:none;letter-spacing:0">${err.message}. Open Copernicus Browser to inspect manually.</span>`;dateEl.textContent='No usable scene returned'}
+    function showStaticScene(phase,scene){
+      const image=document.getElementById(`${phase}Image`),loader=document.getElementById(`${phase}Loader`),date=document.getElementById(`${phase}Date`);
+      image.removeAttribute('src');image.style.display='none';loader.style.display='grid';
+      if(!scene||!scene.src){
+        date.textContent='No prepared asset';
+        const catalog=revision.imagery&&revision.imagery.catalog_url;
+        loader.innerHTML=catalog?`Static image not generated<br><a href="${catalog}" target="_blank" rel="noreferrer">Open source catalog</a>`:'Static image not generated';
+        return;
+      }
+      date.textContent=[scene.acquired,scene.sensor,scene.gsd_m?`${scene.gsd_m} m`:null].filter(Boolean).join(' · ');
+      loader.textContent='Loading prepared image';
+      image.onload=()=>{loader.style.display='none';image.style.display='block'};
+      image.onerror=()=>{date.textContent='Prepared asset missing';loader.textContent='Image file could not be loaded'};
+      image.alt=`${phase==='before'?'Pre-flood':'Post-flood'} satellite view of ${document.getElementById('schoolTitle').textContent}`;
+      image.src=scene.src;
     }
   </script>
 </body>
