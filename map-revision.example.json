@@ -1,0 +1,33 @@
+{
+  "revision": 2,
+  "updated_at": "2026-09-04",
+  "event_date": "2026-08-26",
+  "event_label": "Rasuwa, Nepal",
+  "assessment_label": "The Education Cluster’s 4 September assessment",
+  "impact": {
+    "damaged_total": 21,
+    "destroyed": 9,
+    "partial": 10,
+    "assessment": 2,
+    "within_1km": 82,
+    "affected_districts": ["Rasuwa", "Nuwakot", "Dhading", "Gorkha", "Tanahun"]
+  },
+  "hydrology": {"rise_m": 9, "rise_minutes": 30, "station": "Galchhi"},
+  "route": [[28.337,85.548],[28.306,85.493],[28.276,85.377],[28.215,85.365],[28.166,85.343],[28.120,85.306],[28.063,85.244],[27.993,85.198],[27.950,85.183],[27.913,85.154],[27.865,85.102],[27.822,84.943],[27.806,84.787],[27.780,84.709]],
+  "places": [
+    {"lat":28.306,"lon":85.493,"name":"Lhende Khola","note":"Suspected trigger zone"},
+    {"lat":28.276,"lon":85.377,"name":"Rasuwagadhi","note":"Nepal–China border"},
+    {"lat":28.166,"lon":85.343,"name":"Syabrubesi","note":"Bhote Koshi / Trishuli"},
+    {"lat":27.950,"lon":85.183,"name":"Betrawati","note":"Nuwakot corridor"},
+    {"lat":27.806,"lon":84.787,"name":"Galchhi","note":"9 m rise reported"}
+  ],
+  "schools": [
+    {"lat":28.257,"lon":85.374,"name":"Verified school name","osm_id":"node/000000000","status":"destroyed"},
+    {"lat":28.164,"lon":85.342,"name":"Second verified school","osm_id":"way/000000000","status":"partial"}
+  ],
+  "imagery": {"before_start":"2026-06-01","before_end":"2026-08-25","after_start":"2026-08-27","after_end":"2026-09-04"},
+  "sources": [
+    {"title":"Education Cluster · Revision 2","url":"https://example.org/replace-with-authoritative-assessment"},
+    {"title":"ICIMOD · Scientific update","url":"https://www.icimod.org/kyirong-rasuwa-flood-2026-nepal-china-border/"}
+  ]
+}
